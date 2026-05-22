@@ -23,55 +23,39 @@
             
             <div class="top-right">
                 <div class="user-info">
-                    <img src="https://i.pravatar.cc/32?u=shirahase" alt="白波瀬 智将" class="user-avatar">
+                    <img src="https://i.pravatar.cc/32?u=shirahase" alt="" class="user-avatar">
                     <span>白波瀬 智将</span>
-                </div>
-                <div class="top-icons">
-                    <i class="fas fa-video"></i>
-                    <i class="fas fa-phone"></i>
-                    <i class="fas fa-user-plus"></i>
-                    <i class="fas fa-ellipsis-v"></i>
                 </div>
             </div>
         </header>
 
         <div class="main-content">
-            <!-- Left Sidebar -->
+            <!-- Sidebar -->
             <nav class="sidebar">
-                <div class="nav-item active" onclick="switchTab(0)">
-                    <i class="fas fa-comment-dots"></i>
-                    <span>チャット</span>
-                </div>
-                <div class="nav-item" onclick="switchTab(1)">
-                    <i class="fas fa-users"></i>
-                    <span>チーム</span>
-                </div>
-                <div class="nav-item" onclick="switchTab(2)">
-                    <i class="fas fa-calendar"></i>
-                    <span>予定表</span>
-                </div>
+                <div class="nav-item active"><i class="fas fa-comment-dots"></i><span>チャット</span></div>
+                <div class="nav-item"><i class="fas fa-users"></i><span>チーム</span></div>
+                <div class="nav-item"><i class="fas fa-calendar"></i><span>予定表</span></div>
+                <div class="nav-item"><i class="fas fa-phone"></i><span>通話</span></div>
             </nav>
 
             <!-- Chat List -->
             <div class="chat-list">
                 <div class="chat-list-header">
                     <h3>チャット</h3>
-                    <i class="fas fa-edit"></i>
                 </div>
                 
-                <div class="chat-item active" onclick="openChat(0)">
+                <div class="chat-item active">
                     <img src="https://i.pravatar.cc/40?u=shirahase" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">白波瀬 智将 <span class="status online"></span></div>
+                        <div class="chat-name">白波瀬 智将 <span class="status"></span></div>
                         <div class="chat-preview">あなた: 12/24 13:00か...</div>
                     </div>
                     <div class="chat-time">12:36</div>
                 </div>
             </div>
 
-            <!-- Main Chat Area -->
+            <!-- Chat Area -->
             <div class="chat-area">
-                <!-- Chat Header -->
                 <div class="chat-header">
                     <div class="chat-header-left">
                         <img src="https://i.pravatar.cc/40?u=shirahase" alt="">
@@ -82,14 +66,18 @@
                     </div>
                 </div>
 
-                <!-- Messages -->
-                <div class="messages" id="messages">
-                </div>
+                <div class="messages" id="messages"></div>
 
-                <!-- Message Input -->
                 <div class="message-input-area">
-                    <input type="text" id="message-input" placeholder="新しいメッセージの入力" onkeypress="if(event.key === 'Enter') sendMessage()">
-                    <button onclick="sendMessage()">送信</button>
+                    <div class="input-toolbar">
+                        <i class="fas fa-plus"></i>
+                        <i class="far fa-smile"></i>
+                        <i class="fas fa-paperclip"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="message-input" placeholder="新しいメッセージの入力" onkeypress="if(event.key==='Enter') sendMessage()">
+                        <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
