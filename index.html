@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams - 白波瀬 智将</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="teams-container">
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <div class="top-left">
+                <div class="teams-logo">
+                    <i class="fab fa-microsoft"></i>
+                </div>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="検索">
+                </div>
+            </div>
+            
+            <div class="top-right">
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/32?u=shirahase" alt="白波瀬 智将" class="user-avatar">
+                    <span>白波瀬 智将</span>
+                </div>
+                <div class="top-icons">
+                    <i class="fas fa-video"></i>
+                    <i class="fas fa-phone"></i>
+                    <i class="fas fa-user-plus"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Left Sidebar -->
+            <nav class="sidebar">
+                <div class="nav-item active" onclick="switchTab(0)">
+                    <i class="fas fa-comment-dots"></i>
+                    <span>チャット</span>
+                </div>
+                <div class="nav-item" onclick="switchTab(1)">
+                    <i class="fas fa-users"></i>
+                    <span>チーム</span>
+                </div>
+                <div class="nav-item" onclick="switchTab(2)">
+                    <i class="fas fa-calendar"></i>
+                    <span>予定表</span>
+                </div>
+            </nav>
+
+            <!-- Chat List -->
+            <div class="chat-list">
+                <div class="chat-list-header">
+                    <h3>チャット</h3>
+                    <i class="fas fa-edit"></i>
+                </div>
+                
+                <div class="chat-item active" onclick="openChat(0)">
+                    <img src="https://i.pravatar.cc/40?u=shirahase" alt="">
+                    <div class="chat-info">
+                        <div class="chat-name">白波瀬 智将 <span class="status online"></span></div>
+                        <div class="chat-preview">あなた: 12/24 13:00か...</div>
+                    </div>
+                    <div class="chat-time">12:36</div>
+                </div>
+            </div>
+
+            <!-- Main Chat Area -->
+            <div class="chat-area">
+                <!-- Chat Header -->
+                <div class="chat-header">
+                    <div class="chat-header-left">
+                        <img src="https://i.pravatar.cc/40?u=shirahase" alt="">
+                        <div>
+                            <h2>白波瀬 智将</h2>
+                            <span class="online-status">オンライン</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Messages -->
+                <div class="messages" id="messages">
+                </div>
+
+                <!-- Message Input -->
+                <div class="message-input-area">
+                    <input type="text" id="message-input" placeholder="新しいメッセージの入力" onkeypress="if(event.key === 'Enter') sendMessage()">
+                    <button onclick="sendMessage()">送信</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
