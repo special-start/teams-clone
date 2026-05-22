@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #202124;
+    color: #e8eaed;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.teams-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.top-bar {
+    background: #292c2f;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    border-bottom: 1px solid #3c3f41;
+}
+
+.top-left, .top-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.teams-logo {
+    font-size: 24px;
+    color: #00a4ef;
+}
+
+.search-bar {
+    background: #3c3f41;
+    border-radius: 4px;
+    padding: 6px 12px;
+    width: 320px;
+}
+
+.chat-list {
+    width: 260px;
+    background: #292c2f;
+    border-right: 1px solid #3c3f41;
+}
+
+.chat-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 15px;
+}
+
+.message.right {
+    text-align: right;
+}
+
+.message-bubble {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 18px;
+    max-width: 70%;
+}
+
+.input-box {
+    display: flex;
+    padding: 10px;
+}
+
+.input-box input {
+    flex: 1;
+}
